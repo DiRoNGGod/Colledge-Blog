@@ -1,0 +1,18 @@
+/* &============================= Setting  ==============================*/
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+
+	overflow: hidden;
+}
+
+._container {
+	width: 100%;
+	max-width: var(--container-width);
+
+	margin: 0 auto;
+	padding: 0 var(--container-offset);
+}
+
+/* &===========================================================*/

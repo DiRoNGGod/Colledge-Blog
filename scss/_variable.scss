@@ -1,0 +1,17 @@
+/* &============================= Variable ==============================*/
+
+:root {
+	--main-font: 'Arial', sans-serif;
+	--font-color: #000;
+	--font-size: 16px;
+	--font-weight: 400;
+
+	--content-width: 1220px;   // * Контент
+	--container-offset: 10px;   // * Отступы
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));   // * итоговый контейнер
+
+	--color-black: #000;
+	--color-white: #fff;
+}
+
+/* &===========================================================*/

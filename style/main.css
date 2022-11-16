@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* &============================= Variable ==============================*/
+:root {
+  --main-font: "Arial", sans-serif;
+  --font-color: #000;
+  --font-size: 16px;
+  --font-weight: 400;
+  --content-width: 1220px;
+  --container-offset: 10px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+/* &===========================================================*/
+/* &============================= Zeroing  ==============================*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.2;
+  font-size: var(--font-size);
+  font-family: var(--main-font); /* * Семество шрифтов */
+  font-weight: var(--font-weight);
+  color: var(--font-color);
+  scroll-behavior: smooth; /* * Плавная прокрутка по якорям */
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input, textarea {
+  outline: none;
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+  color: var(--font-color);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  background-color: transparent;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: var(--font-weight);
+}
+
+/* &===========================================================*/
+/* &============================= Setting  ==============================*/
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+._container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+}
+
+/* &===========================================================*//*# sourceMappingURL=main.css.map */
