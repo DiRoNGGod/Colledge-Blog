@@ -96,6 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__container {
   padding: 20px 50px;
+  height: 100%;
   display: grid;
   grid-template: 1fr / auto 1fr auto;
   align-items: center;
@@ -128,15 +129,26 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
+.header__nav {
+  transition: .3s ease;
+}
+
 @media (max-width: 1000px) {
   .header__nav {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px 0;
+    display: flex;
     flex-direction: column;
     width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-btn);
   }
   .header__nav._active {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
     top: var(--header-height);
     left: 0;
   }
@@ -225,6 +237,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 3px;
   width: 100%;
   background-color: var(--color-menu);
+  transition: .2s linear;
 }
 
 .menu-btn__content::before, .menu-btn__content::after {
@@ -234,6 +247,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 3px;
   width: 100%;
   background-color: var(--color-menu);
+  transition: .3s linear;
 }
 
 .menu-btn__content::before {
@@ -242,6 +256,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-btn__content::after {
   top: 0;
+}
+
+.menu-btn__content._active > span {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-btn__content._active::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.menu-btn__content._active::after {
+  top: 50%;
+  transform: rotate(135deg);
 }
 
 @media (max-width: 1000px) {
