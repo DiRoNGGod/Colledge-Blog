@@ -13,7 +13,7 @@
 		<!-- ~ Подлкючение шрифта -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">		
 		<!-- ~ Подлкючение шрифта -->
 
 		<link rel="stylesheet" href="style/main.css">   <!-- ~ Основные стили страницы -->
@@ -22,13 +22,15 @@
 	<body>
 		
 		<div class="wrapper">
-			<!-- === Header === -->
+			<!-- * === Header === -->
 			<header class="header">
 				<div class="header__container">
+					<!-- * === LOGO === -->
 					<div class="header__logo logo">
-						<img src="./images/bx-message-rounded-dots (1).svg" alt="LOGO">
+						<img src="./images/Logo.png" alt="LOGO">
 					</div>
 
+					<!-- * === Navigation === -->
 					<nav class="header__nav">
 						<ul class="header__list">
 							<li class="header__item">
@@ -53,6 +55,7 @@
 						</ul>
 					</nav>
 
+					<!-- * === Buttons === -->
 					<div class="header__buttons">
 						<div class="header__button button button_reg">
 							<a href="#">Регистрация</a>
@@ -65,6 +68,51 @@
 				</div>
 			</header>
 
+			<main class="main">
+				<!-- * === Секция с баннером === -->
+				<section class="banner-section">
+					<div class="_container">
+						<div class="banner-section__content">
+
+							<!-- * === Верхняя часть секции === -->
+							<div class="banner-section__top">
+								<h2 class="banner-section__title title">
+									Свежие новости
+								</h2>
+
+								<!-- * === Кнопки слайдера === -->
+								<div class="banner-section__slider-btn">
+									<div class="slider-btn slider-btn__next"></div>
+									<div class="slider-btn slider-btn__prev"></div>
+								</div>
+							</div>
+
+							<!-- * === Слайдер === -->
+							<div class="banner-section__slider">
+								<div class="banner-section__slider-line">
+									<div class="banner-section__slider-item slider-item">
+										<div class="slider-item__img">
+											<img src="https://avatarko.ru/img/kartinka/6/kot_ryby_5865.jpg" alt="IMAGE">
+										</div>
+
+										<!-- * === Информация о слайдер === -->
+										<div class="slider-item__info">
+											<div class="slider-item__info-top">
+												<p class="slider-item__category">Новости</p>
+												<p class="slider-item__date">17.11.2133</p>
+											</div>
+											<h3 class="slider-item__name">В Волге захлебнулась рыба</h3>
+											<a href="#" class="slider-item__more">Подробнее...</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- * === Menu Button === -->
 			<div class="header__menu-btn menu-btn">
 				<div class="menu-btn__content">
 					<span class="menu-btn__line"></span>
