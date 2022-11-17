@@ -1,15 +1,19 @@
 @charset "UTF-8";
 /* &============================= Variable ==============================*/
 :root {
-  --main-font: "Arial", sans-serif;
+  --main-font: 'Ubuntu', sans-serif;
   --font-color: #000;
-  --font-size: 16px;
+  --font-size: 18px;
   --font-weight: 400;
   --content-width: 1220px;
   --container-offset: 10px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --color-black: #000;
   --color-white: #fff;
+  --color-menu: #000;
+  --background-menu: rgb(212, 117, 50);
+  --color-btn: rgb(202, 89, 8);
+  --header-height: 100px;
 }
 
 /* &===========================================================*/
@@ -18,8 +22,6 @@
   padding: 0;
   margin: 0;
   border: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -37,10 +39,12 @@ html, body {
   width: 100%;
   line-height: 1.2;
   font-size: var(--font-size);
-  font-family: var(--main-font); /* * Семество шрифтов */
+  font-family: var(--main-font);
+  /* * Семество шрифтов */
   font-weight: var(--font-weight);
   color: var(--font-color);
-  scroll-behavior: smooth; /* * Плавная прокрутка по якорям */
+  scroll-behavior: smooth;
+  /* * Плавная прокрутка по якорям */
 }
 
 input, button, textarea {
@@ -84,4 +88,165 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 var(--container-offset);
 }
 
-/* &===========================================================*//*# sourceMappingURL=main.css.map */
+/* &===========================================================*/
+.header {
+  position: relative;
+  height: var(--header-height);
+}
+
+.header__container {
+  padding: 20px 50px;
+  display: grid;
+  grid-template: 1fr / auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 1px solid var(--color-btn);
+}
+
+@media (max-width: 1000px) {
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+  }
+}
+
+.header__logo {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  justify-self: start;
+  overflow: hidden;
+}
+
+.header__logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  .header__nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+  }
+  .header__nav._active {
+    display: flex;
+    top: var(--header-height);
+    left: 0;
+  }
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.header__list > *:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media (max-width: 1000px) {
+  .header__list {
+    flex-direction: column;
+  }
+  .header__list > *:not(:last-child) {
+    margin: 0 0 10px 0;
+  }
+}
+
+.header__buttons {
+  display: flex;
+}
+
+.header__buttons > * {
+  margin-left: 25px;
+}
+
+@media (max-width: 1000px) {
+  .header__buttons > * {
+    margin-left: 10px;
+  }
+  .header__buttons > *:first-child {
+    margin-left: 0;
+  }
+}
+
+.button {
+  padding: 10px 15px;
+  border: 2px solid var(--color-btn);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.button_reg a {
+  color: var(--color-btn);
+}
+
+.button_auth {
+  background-color: var(--color-btn);
+  border: 2px solid var(--color-btn);
+}
+
+@media (max-width: 1000px) {
+  .button {
+    font-size: 14px;
+  }
+}
+
+.menu-btn {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  height: 40px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--background-menu);
+}
+
+.menu-btn__content {
+  position: relative;
+  height: 100%;
+}
+
+.menu-btn__content > span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-menu);
+}
+
+.menu-btn__content::before, .menu-btn__content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-menu);
+}
+
+.menu-btn__content::before {
+  bottom: 0;
+}
+
+.menu-btn__content::after {
+  top: 0;
+}
+
+@media (max-width: 1000px) {
+  .menu-btn {
+    display: block;
+  }
+}
+/*# sourceMappingURL=main.css.map */

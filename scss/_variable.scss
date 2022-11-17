@@ -1,9 +1,9 @@
 /* &============================= Variable ==============================*/
 
 :root {
-	--main-font: 'Arial', sans-serif;
+	--main-font: 'Ubuntu', sans-serif;
 	--font-color: #000;
-	--font-size: 16px;
+	--font-size: 18px;
 	--font-weight: 400;
 
 	--content-width: 1220px;   // * Контент
@@ -12,6 +12,11 @@
 
 	--color-black: #000;
 	--color-white: #fff;
+	--color-menu: #000;
+	--background-menu: rgb(212, 117, 50);
+	--color-btn: rgb(202, 89, 8);
+
+	--header-height: 100px;
 }
 
 /* &===========================================================*/
