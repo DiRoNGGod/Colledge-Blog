@@ -1,5 +1,11 @@
 /* &============================= Setting  ==============================*/
 
+html, body {
+	background-color: var();
+
+	transition: var(--transition-3);
+}
+
 .wrapper {
 	width: 100%;
 	min-height: 100vh;

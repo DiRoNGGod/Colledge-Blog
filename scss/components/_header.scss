@@ -6,7 +6,11 @@
     height: var(--header-height);
     width: 100%;
 
-    background-color: var(--color-white);
+    transition: var(--transition-3);
+
+    &._scroll {
+        background-color: var();
+    }
 
     &__container {   // * Container
         padding: 20px 50px;
@@ -18,7 +22,7 @@
         align-items: center;
         justify-items: center;
 
-        border-bottom: 1px solid var(--color-btn);
+        border-bottom: 1px solid var();
 
         @media (max-width: 1000px) {
             display: flex;
@@ -56,7 +60,7 @@
     // * Navigation
 
     &__nav {
-        transition: .3s ease;
+        transition: var(--transition-3);
 
         z-index: 100;
 
@@ -74,7 +78,7 @@
             top: 0;
             left: 0;
 
-            background-color: var(--color-btn);
+            background-color: var();
 
 
             &._active {
@@ -139,7 +143,7 @@
 }
 
 .button {
-    border: 2px solid var(--color-btn);
+    border: 2px solid var();
     border-radius: 10px;
 
     font-weight: 700;
@@ -150,12 +154,12 @@
 
     &_reg {
         & a {
-            color: var(--color-btn);
+            color: var();
         }
     }
 
     &_auth {
-        background-color: var(--color-btn);
+        background-color: var();
     }
 
     @media (max-width: 1000px) {
@@ -181,7 +185,7 @@
 
     border-radius: 5px;
 
-    background-color: var(--background-menu);
+    background-color: var();
 
     &__content {
         position: relative;
@@ -199,9 +203,9 @@
             height: 3px;
             width: 100%;
     
-            background-color: var(--color-menu);
+            background-color: var();
 
-            transition: .2s linear;
+            transition: var(--transition-2);
         }
 
         &::before, &::after {
@@ -214,9 +218,9 @@
             height: 3px;
             width: 100%;
 
-            background-color: var(--color-menu);
+            background-color: var();
 
-            transition: .3s linear;
+            transition: var(--transition-3);
         }
         &::before {
             bottom: 0;

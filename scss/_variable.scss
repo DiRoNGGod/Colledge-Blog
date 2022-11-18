@@ -10,14 +10,36 @@
 	--container-offset: 10px;   // * Отступы
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));   // * итоговый контейнер
 
-	--color-black: #000;
-	--color-white: #fff;
-	--color-menu: #000;
-	--background-menu: rgb(212, 117, 50);
-	--color-btn: rgb(202, 89, 8);
+	// colors setting
+    --main-color-white: #ffffff;
+    --main-color-black: #000000;
+    --main-color-blue: #1565C0;
+    --main-color-indigo: #283593;
+    --main-color-red: #D84315;
+    --main-color-gray-100: #EEEEEE;
+    --main-color-gray-200: #BDBDBD;
+    --main-color-gray-300: #9E9E9E;
+    --main-color-gray-400: #757575;
+    --main-color-gray-500: #424242;
+    --main-color-gray-600: #212121;
 
 	--header-height: 100px;
 	--slider-btn-size: 50px;
+
+	--transition-1: .1s ease;
+	--transition-2: .2s ease;
+	--transition-3: .3s ease;
+	--transition-4: .6s ease;
+
+	--color-dark: rgb(32, 32, 32);
+	--background-block: 
 }
 
 /* &===========================================================*/
+/* &=================== Change Theme ===============================*/
+[data-theme=dark]{
+    
+}
+[data-theme=light]{
+    
+}

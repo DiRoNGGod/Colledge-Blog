@@ -1,0 +1,24 @@
+.theme-block {
+    width: var(--slider-btn-size);
+    height: var(--slider-btn-size);
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    background-color: var();
+    border-radius: 50%;
+
+    & > input {
+        display: none;
+    }
+
+    & > label {
+        display: block;
+
+        height: 100%;
+        width: 100%;
+
+        cursor: pointer;
+    }
+}
