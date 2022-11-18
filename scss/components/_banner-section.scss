@@ -55,6 +55,8 @@
     top: 0;
     right: 0;
 
+    background-color: var(--font-main-color);
+
     cursor: pointer;
 
     &__next {    
@@ -64,7 +66,7 @@
         &::after {
             content: ">";
 
-            color: var();
+            color: var(--block-main-color);
             font-size: 40px;
             font-weight: 700;
             line-height: var(--slider-btn-size) - 1px;
@@ -81,7 +83,7 @@
         &::after {
             content: "<";
 
-            color: var();
+            color: var(--block-main-color);
             font-size: 40px;
             font-weight: 700;
             line-height: var(--slider-btn-size) - 1px;
@@ -121,7 +123,16 @@
     // * Информация о слайде
 
     &__info {
-        background-color: #fff;
+        background-color: var(--background-main-color);
+        color: var(--font-main-color);
+
+        transition: var(--transition-3);
+
+        max-width: 70%;
+
+        & a {
+            color: var(--font-main-color);
+        }
 
         position: absolute;
         bottom: 30px;

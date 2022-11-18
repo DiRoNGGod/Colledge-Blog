@@ -31,6 +31,26 @@
 
 /* &===========================================================*/
 /* &=================== Change Theme ===============================*/
+[data-theme=dark] {
+  --font-main-color: var(--main-color-white);
+  --font-secondary-color: var(--main-color-gray-200);
+  --background-main-color: var(--main-color-gray-600);
+  --background-secondary-color: var(--main-color-gray-500);
+  --block-main-color: var(--main-color-gray-200);
+  --color-accent: var(--main-color-red);
+  --theme-rotate: 210deg;
+}
+
+[data-theme=light] {
+  --font-main-color: var(--main-color-black);
+  --font-secondary-color: var(--main-color-gray-500);
+  --background-main-color: var(--main-color-gray-100);
+  --background-secondary-color: var(--main-color-gray-300);
+  --block-main-color: var(--main-color-gray-200);
+  --color-accent: var(--main-color-blue);
+  --theme-rotate: 0deg;
+}
+
 /* &============================= Zeroing  ==============================*/
 * {
   padding: 0;
@@ -43,7 +63,7 @@
 
 a {
   text-decoration: none;
-  color: var();
+  color: var(--font-main-color);
   display: inline-block;
 }
 
@@ -58,7 +78,7 @@ html, body {
   font-size: var(--font-size);
   font-family: var(--main-font); /* * Семество шрифтов */
   font-weight: var(--font-weight);
-  color: var();
+  color: var(--font-main-color);
   scroll-behavior: smooth; /* * Плавная прокрутка по якорям */
 }
 
@@ -73,7 +93,7 @@ input, textarea {
 
 button {
   cursor: pointer;
-  color: var();
+  color: var(--font-main-color);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   background-color: transparent;
@@ -91,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 /* &===========================================================*/
 /* &============================= Setting  ==============================*/
 html, body {
-  background-color: var();
+  background-color: var(--background-main-color);
   transition: var(--transition-3);
 }
 
@@ -125,7 +145,7 @@ section {
   transition: var(--transition-3);
 }
 .header._scroll {
-  background-color: var();
+  background-color: var(--background-secondary-color);
 }
 .header__container {
   padding: 20px 50px;
@@ -134,7 +154,7 @@ section {
   grid-template: 1fr/auto 1fr auto;
   align-items: center;
   justify-items: center;
-  border-bottom: 1px solid var();
+  border-bottom: 1px solid var(--color-accent);
 }
 @media (max-width: 1000px) {
   .header__container {
@@ -149,6 +169,7 @@ section {
   height: 50px;
   justify-self: start;
   overflow: hidden;
+  cursor: pointer;
 }
 .header__logo img {
   position: absolute;
@@ -173,7 +194,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var();
+    background-color: var(--color-accent);
   }
   .header__nav._active {
     opacity: 1;
@@ -197,6 +218,25 @@ section {
   .header__list > *:not(:last-child) {
     margin: 0 0 10px 0;
   }
+}
+.header__item {
+  position: relative;
+}
+.header__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--font-main-color);
+  transform: scale(0);
+  opacity: 0;
+  transition: var(--transition-2);
+}
+.header__item:hover.header__item::before, .header__item:active.header__item::before {
+  transform: scale(1);
+  opacity: 1;
 }
 .header__link {
   padding: 5px 10px;
@@ -223,18 +263,32 @@ section {
 }
 
 .button {
-  border: 2px solid var();
+  border: 2px solid var(--color-accent);
   border-radius: 10px;
   font-weight: 700;
 }
 .button a {
   padding: 10px 15px;
 }
+.button_reg {
+  transition: var(--transition-2);
+}
 .button_reg a {
-  color: var();
+  color: var(--color-accent);
+  transition: var(--transition-2);
+}
+.button_reg:hover, .button_reg:active {
+  background-color: var(--color-accent);
+}
+.button_reg:hover.button_reg > a, .button_reg:active.button_reg > a {
+  color: var(--font-secondary-color);
 }
 .button_auth {
-  background-color: var();
+  background-color: var(--color-accent);
+  transition: var(--transition-2);
+}
+.button_auth:hover, .button_auth:active {
+  opacity: 0.8;
 }
 @media (max-width: 1000px) {
   .button {
@@ -252,7 +306,7 @@ section {
   width: 50px;
   padding: 10px;
   border-radius: 5px;
-  background-color: var();
+  background-color: var(--color-accent);
 }
 .menu-btn__content {
   position: relative;
@@ -265,7 +319,7 @@ section {
   transform: translateY(-50%);
   height: 3px;
   width: 100%;
-  background-color: var();
+  background-color: var(--main-color-black);
   transition: var(--transition-2);
 }
 .menu-btn__content::before, .menu-btn__content::after {
@@ -274,7 +328,7 @@ section {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: var();
+  background-color: var(--main-color-black);
   transition: var(--transition-3);
 }
 .menu-btn__content::before {
@@ -334,6 +388,7 @@ section {
   position: absolute;
   top: 0;
   right: 0;
+  background-color: var(--font-main-color);
   cursor: pointer;
 }
 .slider-btn__next {
@@ -341,7 +396,7 @@ section {
 }
 .slider-btn__next::after {
   content: ">";
-  color: var();
+  color: var(--block-main-color);
   font-size: 40px;
   font-weight: 700;
   line-height: var(--slider-btn-size)-1px;
@@ -353,7 +408,7 @@ section {
 }
 .slider-btn__prev::after {
   content: "<";
-  color: var();
+  color: var(--block-main-color);
   font-size: 40px;
   font-weight: 700;
   line-height: var(--slider-btn-size)-1px;
@@ -379,12 +434,18 @@ section {
   object-fit: cover;
 }
 .slider-item__info {
-  background-color: #fff;
+  background-color: var(--background-main-color);
+  color: var(--font-main-color);
+  transition: var(--transition-3);
+  max-width: 70%;
   position: absolute;
   bottom: 30px;
   left: 30px;
   padding: 30px 20px;
   border-radius: 10px;
+}
+.slider-item__info a {
+  color: var(--font-main-color);
 }
 .slider-item__info > *:not(:last-child) {
   margin-bottom: 20px;
@@ -442,11 +503,13 @@ section {
 .theme-block {
   width: var(--slider-btn-size);
   height: var(--slider-btn-size);
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var();
+  background-color: var(--color-accent);
   border-radius: 50%;
+  transform: rotate(var(--theme-rotate));
+  transition: var(--transition-3);
 }
 .theme-block > input {
   display: none;
@@ -456,4 +519,13 @@ section {
   height: 100%;
   width: 100%;
   cursor: pointer;
+  position: relative;
+}
+.theme-block > label img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }/*# sourceMappingURL=main.css.map */

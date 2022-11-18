@@ -2,12 +2,16 @@
     width: var(--slider-btn-size);
     height: var(--slider-btn-size);
 
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
 
-    background-color: var();
+    background-color: var(--color-accent);
     border-radius: 50%;
+
+    transform: rotate(var(--theme-rotate));
+
+    transition: var(--transition-3);
 
     & > input {
         display: none;
@@ -20,5 +24,18 @@
         width: 100%;
 
         cursor: pointer;
+
+        position: relative;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
     }
 }

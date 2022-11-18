@@ -38,8 +38,28 @@
 /* &===========================================================*/
 /* &=================== Change Theme ===============================*/
 [data-theme=dark]{
-    
+    --font-main-color: var(--main-color-white);
+    --font-secondary-color: var(--main-color-gray-200);
+
+	--background-main-color: var(--main-color-gray-600);
+	--background-secondary-color: var(--main-color-gray-500);
+
+	--block-main-color: var(--main-color-gray-200);
+
+	--color-accent: var(--main-color-red);
+
+	--theme-rotate: 210deg;
 }
 [data-theme=light]{
-    
+    --font-main-color: var(--main-color-black);
+    --font-secondary-color: var(--main-color-gray-500);
+
+	--background-main-color: var(--main-color-gray-100);
+	--background-secondary-color: var(--main-color-gray-300);
+
+	--block-main-color: var(--main-color-gray-200);
+
+	--color-accent: var(--main-color-blue);
+
+	--theme-rotate: 0deg;
 }

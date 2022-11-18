@@ -9,7 +9,7 @@
     transition: var(--transition-3);
 
     &._scroll {
-        background-color: var();
+        background-color: var(--background-secondary-color);
     }
 
     &__container {   // * Container
@@ -22,7 +22,7 @@
         align-items: center;
         justify-items: center;
 
-        border-bottom: 1px solid var();
+        border-bottom: 1px solid var(--color-accent);
 
         @media (max-width: 1000px) {
             display: flex;
@@ -44,6 +44,7 @@
 
         overflow: hidden;
 
+        cursor: pointer;
 
         & img {
             position: absolute;
@@ -78,7 +79,7 @@
             top: 0;
             left: 0;
 
-            background-color: var();
+            background-color: var(--color-accent);
 
 
             &._active {
@@ -111,6 +112,31 @@
     }
 
     &__item {
+        position: relative;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            height: 2px;
+            width: 100%;
+
+            background-color: var(--font-main-color);
+
+            transform: scale(0);
+            opacity: 0;
+
+            transition: var(--transition-2);
+        }
+
+        &:hover.header__item::before, 
+        &:active.header__item::before {
+            transform: scale(1);
+            opacity: 1;
+        }
     }
 
     &__link {
@@ -143,7 +169,7 @@
 }
 
 .button {
-    border: 2px solid var();
+    border: 2px solid var(--color-accent);
     border-radius: 10px;
 
     font-weight: 700;
@@ -153,13 +179,34 @@
     }
 
     &_reg {
+        transition: var(--transition-2);
+
+
         & a {
-            color: var();
+            color: var(--color-accent);
+
+            transition: var(--transition-2);
+        }
+
+        &:hover,
+        &:active {
+            background-color: var(--color-accent);
+        }
+        &:hover.button_reg > a,
+        &:active.button_reg > a {
+            color: var(--font-secondary-color);
         }
     }
 
     &_auth {
-        background-color: var();
+        background-color: var(--color-accent);
+
+        transition: var(--transition-2);
+
+        &:hover, 
+        &:active {
+            opacity: 0.8;
+        }
     }
 
     @media (max-width: 1000px) {
@@ -185,7 +232,7 @@
 
     border-radius: 5px;
 
-    background-color: var();
+    background-color: var(--color-accent);
 
     &__content {
         position: relative;
@@ -203,7 +250,7 @@
             height: 3px;
             width: 100%;
     
-            background-color: var();
+            background-color: var(--main-color-black);
 
             transition: var(--transition-2);
         }
@@ -218,7 +265,7 @@
             height: 3px;
             width: 100%;
 
-            background-color: var();
+            background-color: var(--main-color-black);
 
             transition: var(--transition-3);
         }

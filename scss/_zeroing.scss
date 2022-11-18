@@ -12,7 +12,7 @@
 
 a {
 	text-decoration: none;
-	color: var();
+	color: var(--font-main-color);
 	display: inline-block;
 }
 
@@ -27,7 +27,7 @@ html, body {
 	font-size: var(--font-size);
 	font-family: var(--main-font);   /* * Семество шрифтов */
 	font-weight: var(--font-weight);
-	color: var();
+	color: var(--font-main-color);
 	scroll-behavior: smooth;   /* * Плавная прокрутка по якорям */
 }
 
@@ -42,7 +42,7 @@ input, textarea {
 
 button {
 	cursor: pointer;
-	color: var();
+	color: var(--font-main-color);
     font-size: var(--font-size);
     font-weight: var(--font-weight);
 	background-color: transparent;
