@@ -17,7 +17,7 @@
   --main-color-blue-bg: #d6e5f5;
   --main-color-indigo: #283593;
   --main-color-red: #D84315;
-  --main-color-blue-bg: #7594b8;
+  --main-color-blue-bg: #8e9fb3;
   --secondary-color-blue-bg: #5582b6;
   --main-color-link-red: #f66a40;
   --main-color-link-bg-red: #fab9a5;
@@ -55,7 +55,7 @@
 
 [data-theme=light] {
   --font-main-color: var(--main-color-black);
-  --font-secondary-color: var(--main-color-gray-400);
+  --font-secondary-color: var(--main-color-gray-500);
   --font-link-color: var(--main-color-link-blue);
   --background-main-color: var(--main-color-blue-bg);
   --background-secondary-color: var(--secondary-color-blue-bg);
@@ -256,7 +256,7 @@ section {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background-color: var(--font-main-color);
   transform: scale(0);
@@ -701,6 +701,66 @@ section {
 }
 .news__more:hover {
   opacity: 0.7;
+}
+
+.news__single-item {
+  background-color: var(--background-secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.news__single-item-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 48%;
+  margin-bottom: 25px;
+}
+.news__single-item-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.news__single-item-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.news__single-item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.news__single-item-detail {
+  display: flex;
+  flex-direction: column;
+}
+.news__single-item-detail > span:first-child {
+  font-size: 18px;
+  color: var(--font-secondary-color);
+}
+.news__single-item-author {
+  display: flex;
+  flex-direction: column;
+}
+.news__single-item-user-title {
+  margin-bottom: 20px;
+}
+.news .user-title-1 {
+  font-size: 30px;
+}
+.news .user-title-2 {
+  font-size: 24px;
+}
+.news .user-title-3 {
+  font-size: 22px;
+}
+.news__single-item-link {
+  color: var(--font-link-color);
 }
 
 .news__filter {

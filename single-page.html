@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">  <!-- ~ Кодировка страницы -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <!-- ~ Адаптивность / Запрет масштабирования -->
+		<meta name="robots" content="none">  <!-- ~ Запрет индексации страницы -->
+
+		<link rel="icon" href="favicon.ico" type="image/x-icon">   <!-- ~ Подключение иконки вкладки -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<title>College Blog</title>   <!-- ~ Заголовок сайта -->
+
+		<!-- ~ Подлкючение шрифта -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">		
+		<!-- ~ Подлкючение шрифта -->
+
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">   <!-- ~ Иконочный шрифт -->
+
+		<link rel="stylesheet" href="style/main.css">   <!-- ~ Основные стили страницы -->
+	</head>
+
+	<body>
+		
+		<div class="wrapper">
+			<!-- * === Header === -->
+			<header class="header">
+				<div class="header__container">
+					<!-- * === LOGO === -->
+					<div class="header__logo logo">
+						<img src="./images/Logo.png" alt="LOGO">
+					</div>
+
+					<!-- * === Navigation === -->
+					<nav class="header__nav">
+						<ul class="header__list">
+							<li class="header__item">
+								<a href="./index.html" class="header__link">Главная</a>
+							</li>
+
+							<li class="header__item">
+								<a href="./index.html" class="header__link">Новости</a>
+							</li>
+							
+							<li class="header__item">
+								<a href="#" class="header__link">Статьи</a>
+							</li>
+
+							<li class="header__item">
+								<a href="#" class="header__link">О сайте</a>
+							</li>
+
+							<li class="header__item">
+								<a href="#" class="header__link">Вопрос&ответ</a>
+							</li>
+						</ul>
+					</nav>
+
+					<!-- * === Buttons === -->
+					<div class="header__buttons">
+						<div class="header__button button button_reg">
+							<a href="#">Регистрация</a>
+						</div>
+
+						<div class="header__button button button_auth">
+							<a href="#">Войти</a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main class="main">
+				<!-- *==== News ==== -->
+				<section class="news">
+					<div class="_container news-grid">
+						<div class="news__single">
+							<div class="news__single-item">
+								<div class="news__single-item-img">
+									<img src="./images/default.jpg" alt="">
+								</div>
+
+								<h3 class="news__single-item-title">
+									Название
+								</h3>
+
+								<div class="news__single-item-info">
+									<p class="news__single-item-detail">
+										<span>Категория</span>
+										<span>категория</span>
+									</p>
+
+									<p class="news__single-item-detail">
+										<span>Дата публикации</span>
+										<span>дата</span>
+									</p>
+
+									<p class="news__single-item-detail">
+										<span>Автор</span>
+										<span>Фамилия Имя Отчество</span>
+									</p>
+								</div>
+							</div>
+
+							<h3 class="news__single-item-user-title user-title-1">
+								Заголовок 1 уровня
+							</h3>
+
+							<p class="news__single-item-text">
+								Длинное описание с возможными <a href="" class="news__single-item-link">ссылками</a> внутри текста
+							</p>
+						</div>
+
+						<aside class="news__filter">
+							<div class="news__filter-content">
+								<form action="" method="post" class="news__filter-form">
+									<input type="text" name="search-text" placeholder="Поиск...">
+									<button type="submit">
+										<i class="bx bx-search"></i>
+									</button>
+								</form>
+
+								<div class="news__filter-category">
+									<div class="news__filter-category-name">
+										<span>Категории</span>
+										<span class="news__filter-accordion">
+											<i class='bx bxs-down-arrow'></i>
+										</span>
+									</div>
+
+									<ul class="news__filter-category-list">
+										<li class="news__filter-category-item">
+											<a href="#">Категория</a>
+										</li>
+										<li class="news__filter-category-item">
+											<a href="#">Категория</a>
+										</li>
+										<li class="news__filter-category-item">
+											<a href="#">Категория</a>
+										</li>
+										<li class="news__filter-category-item">
+											<a href="#">Категория</a>
+										</li>
+										<li class="news__filter-category-item">
+											<a href="#">Категория</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="news__filter-tags">
+									<div class="news__filter-tags-name">
+										<span>Теги</span>
+										<span class="news__filter-accordion">
+											<i class='bx bxs-down-arrow'></i>
+										</span>
+									</div>
+
+									<ul class="news__filter-tags-list">
+										<li class="news__filter-tags-item">
+											<a href="#">Тег</a>
+										</li>
+										<li class="news__filter-tags-item">
+											<a href="#">Тег</a>
+										</li>
+										<li class="news__filter-tags-item">
+											<a href="#">Тег</a>
+										</li>
+										<li class="news__filter-tags-item">
+											<a href="#">Тег</a>
+										</li>
+										<li class="news__filter-tags-item">
+											<a href="#">Тег</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</section>
+			</main>
+
+			<!-- * === Menu Button === -->
+			<div class="header__menu-btn menu-btn">
+				<div class="menu-btn__content">
+					<span class="menu-btn__line"></span>
+				</div>
+			</div>
+
+			<!-- * === Change Theme === -->
+			<div class="theme-block">
+				<label for="theme-block__checkbox">
+					<i class='bx bxs-moon'></i>
+				</label>
+				<input id="theme-block__checkbox" type="checkbox">
+			</div>
+		</div>
+
+		<script src="./js/main.js"></script>   <!-- ~ Подключение скрипта инструментов -->
+	</body>
+</html>

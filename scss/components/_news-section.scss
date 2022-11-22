@@ -223,6 +223,94 @@
     }
 }
 
+// * ===================== Карточка отдельно новости
+
+.news {
+
+    &__single-item {
+        background-color: var(--background-secondary-color);
+
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        
+        overflow: hidden;
+
+        margin-bottom: 30px;
+    }
+
+    &__single-item-img {
+        position: relative;
+
+        width: 100%;
+        padding-bottom: 48%;
+
+        margin-bottom: 25px;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__single-item-title {
+        font-size: 24px;
+        text-transform: uppercase;
+
+        margin-left: 20px;
+    }
+
+    &__single-item-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 20px;
+    }
+
+    &__single-item-detail {
+        display: flex;
+        flex-direction: column;
+
+        & > span:first-child {
+            font-size: 18px;
+            color: var(--font-secondary-color)
+        }
+    }
+
+    &__single-item-author {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__single-item-user-title {
+    }
+
+    &__single-item-user-title {
+        margin-bottom: 20px;
+    }
+
+    .user-title-1 {
+        font-size: 30px;
+    }
+    .user-title-2 {
+        font-size: 24px;
+    }
+    .user-title-3 {
+        font-size: 22px;
+    }
+
+    &__single-item-link {
+        color: var(--font-link-color);
+    }
+}
+
+
 // * ====================== Секция боковой панели
 
 .news {
