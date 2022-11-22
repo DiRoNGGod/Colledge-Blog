@@ -18,7 +18,7 @@
     &__slider {
         width: 100%;
 
-        border-radius: 10px;
+        border-radius: var(--border-radius);
 
         overflow: hidden;
 
@@ -49,7 +49,7 @@
 
     background-color: #000;
 
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 
     position: absolute;
     top: 0;
@@ -123,15 +123,16 @@
     // * Информация о слайде
 
     &__info {
-        background-color: var(--background-main-color);
+        background-color: var(--block-main-color);
         color: var(--font-main-color);
 
         transition: var(--transition-3);
 
         max-width: 70%;
+        min-width: 40%;
 
         & a {
-            color: var(--font-main-color);
+            color: var(--font-link-color);
         }
 
         position: absolute;
@@ -140,7 +141,7 @@
 
         padding: 30px 20px;
 
-        border-radius: 10px;
+        border-radius: var(--border-radius);
 
 
         & > *:not(:last-child) {
@@ -161,7 +162,7 @@
 
     &__info-top {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
 
         & > *:first-child {
             margin: 0 20px 0 10px;

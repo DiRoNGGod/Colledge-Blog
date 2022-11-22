@@ -30,3 +30,16 @@ section {
 }
 
 /* &===========================================================*/
+
+.clamp-1 {
+	text-overflow: ellipsis;
+	
+	overflow: hidden;
+	white-space: nowrap;
+}
+.clamp-2 {
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}

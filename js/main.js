@@ -86,3 +86,39 @@ function switchTheme(e){
     }
 }
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+// & Смена вида плиток новостей
+
+const newsButtonsList = document.querySelector('#list-news');
+const newsButtonsBrick = document.querySelector('#brick-news');
+
+const newsContent = document.querySelector('.news__row');
+
+newsButtonsBrick.addEventListener('click', function (e) {
+    if(newsContent.classList.contains('list-news')) {
+        newsContent.classList.remove('list-news');
+        newsContent.classList.add('brick-news');
+        newsButtonsBrick.classList.add('_active');
+        newsButtonsList.classList.remove('_active');
+    }
+})
+newsButtonsList.addEventListener('click', function (e) {
+    if(newsContent.classList.contains('brick-news')) {
+        newsContent.classList.remove('brick-news');
+        newsContent.classList.add('list-news');
+        newsButtonsBrick.classList.remove('_active');
+        newsButtonsList.classList.add('_active');
+    }
+})
+
+// & Раскрытие аккордеона
+
+const listButton = document.querySelectorAll('.news__filter-accordion');
+
+listButton.forEach(el => {
+    el.addEventListener('click', function (e) {
+        el.classList.toggle('_active');
+
+        el.parentElement.nextElementSibling.classList.toggle('_active');
+    })
+});

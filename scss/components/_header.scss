@@ -194,7 +194,7 @@
         }
         &:hover.button_reg > a,
         &:active.button_reg > a {
-            color: var(--font-secondary-color);
+            color: var(--font-main-color);
         }
     }
 
@@ -226,7 +226,7 @@
     z-index: 100;
 
     height: 40px;
-    width: 50px;
+    width: 45px;
 
     padding: 10px;
 
