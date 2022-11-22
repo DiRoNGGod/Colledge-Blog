@@ -1,0 +1,213 @@
+// * =================== Секция карточек новостей
+.news-grid {
+    display: flex;
+}
+
+.news {
+
+
+    &__content {
+    }
+
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: var(--block-main-color);
+
+        padding: 10px;
+
+        border-radius: var(--border-radius);
+
+        box-shadow: var(--box-shadow);
+
+        margin-bottom: 25px;
+    }
+
+
+    &__title {
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+
+    &__vision-btn-content {
+        display: flex;
+    }
+
+
+    &__vision-btn {
+        background-color: var(--block-secondary-color);
+
+        padding: 5px;
+
+        border-radius: calc(var(--border-radius) / 2);
+
+        font-size: 20px;
+
+        cursor: pointer;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+
+
+    &__row {
+
+        & > :not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        background-color: var(--block-main-color);
+        
+        border-radius: var(--border-radius);
+
+        padding: 25px 20px;
+
+        box-shadow: var(--box-shadow);
+    }
+
+
+    &__img {
+        position: relative;
+
+        width: 100%;
+
+        margin-right: 20px;
+        padding-bottom: 20%;
+
+        flex: 1 0 40%;
+
+        border-radius: calc(var(--border-radius) / 2);
+
+        overflow: hidden;
+
+
+        & img {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+
+    &__info {
+        & > *:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+
+    &__category-date {
+        display: flex;
+
+        font-size: 16px;
+        color: var(--font-secondary-color);
+    }
+
+
+    &__date {
+        margin-right: 20px;
+    }
+
+
+    &__category {
+    }
+
+
+    &__name {
+        font-size: 24px;
+
+        text-transform: uppercase;
+    }
+
+
+    &__text {
+    }
+
+
+    &__more {
+        color: var(--font-link-color);
+
+        padding: 10px;
+        
+        border-radius: var(--border-radius);
+
+        background-color: var(--block-link-color);
+
+        cursor: pointer;
+
+        transition: var(--transition-3);
+
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+// * ====================== Секция боковой панели
+
+.news {
+
+
+    &__filter {
+        margin-left: 30px;
+    }
+
+
+    &__filter-content {
+    }
+
+
+    &__filter-form {
+    }
+
+
+    &__filter-category {
+    }
+
+
+    &__filter-category-name {
+    }
+
+
+    &__filter-category-list {
+    }
+
+
+    &__filter-category-item {
+    }
+
+
+    &__filter-tags {
+    }
+
+
+    &__filter-tags-name {
+    }
+
+
+    &__filter-tags-list {
+    }
+
+
+    &__filter-tags-item {
+    }
+}
+

@@ -8,13 +8,15 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon">   <!-- ~ Подключение иконки вкладки -->
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-		<title>Document</title>   <!-- ~ Заголовок сайта -->
+		<title>College Blog</title>   <!-- ~ Заголовок сайта -->
 
 		<!-- ~ Подлкючение шрифта -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">		
 		<!-- ~ Подлкючение шрифта -->
+
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">   <!-- ~ Иконочный шрифт -->
 
 		<link rel="stylesheet" href="style/main.css">   <!-- ~ Основные стили страницы -->
 	</head>
@@ -142,6 +144,139 @@
 						</div>
 					</div>
 				</section>
+
+				<!-- *==== News ==== -->
+				<section class="news">
+					<div class="_container news-grid">
+						<div class="news__content">
+							<div class="news__header">
+								<p class="news__title title">Новости</p>
+
+								<div class="news__vision-btn-content">
+									<div class="news__vision-btn">
+										<i class='bx bx-list-ul' ></i>
+									</div>
+									<div class="news__vision-btn">
+										<i class="bx bxs-grid-alt"></i>
+									</div>
+								</div>
+							</div>
+
+							<div class="news__row">
+								<div class="news__item">
+									<div class="news__img">
+										<img src="./images/stavki.jpg" alt="NEWS">
+									</div>
+
+									<div class="news__info">
+										<div class="news__category-date">
+											<p class="news__date">17.11.2022</p>
+											<p class="news__category">Наука</p>
+										</div>
+
+										<p class="news__name">Lorem ipsum dolor sit.</p>
+
+										<p class="news__text clamp-4s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque voluptate, quis libero tempora dolorem ea culpa ipsam molestias, beatae excepturi aut, blanditiis itaque debitis sapiente ullam enim assumenda doloribus?</p>
+
+										<a href="#" class="news__more">Подробнее</a>
+									</div>
+								</div>
+
+								<div class="news__item">
+									<div class="news__img">
+										<img src="./images/stavki.jpg" alt="NEWS">
+									</div>
+
+									<div class="news__info">
+										<div class="news__category-date">
+											<p class="news__date">17.11.2022</p>
+											<p class="news__category">Наука</p>
+										</div>
+
+										<p class="news__name">Lorem ipsum dolor sit.</p>
+
+										<p class="news__text clamp-4s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque voluptate, quis libero tempora dolorem ea culpa ipsam molestias, beatae excepturi aut, blanditiis itaque debitis sapiente ullam enim assumenda doloribus?</p>
+
+										<a href="#" class="news__more">Подробнее</a>
+									</div>
+								</div>
+
+								<div class="news__item">
+									<div class="news__img">
+										<img src="./images/stavki.jpg" alt="NEWS">
+									</div>
+
+									<div class="news__info">
+										<div class="news__category-date">
+											<p class="news__date">17.11.2022</p>
+											<p class="news__category">Наука</p>
+										</div>
+
+										<p class="news__name">Lorem ipsum dolor sit.</p>
+
+										<p class="news__text clamp-4s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque voluptate, quis libero tempora dolorem ea culpa ipsam molestias, beatae excepturi aut, blanditiis itaque debitis sapiente ullam enim assumenda doloribus?</p>
+
+										<a href="#" class="news__more">Подробнее</a>
+									</div>
+								</div>
+
+								<div class="news__item">
+									<div class="news__img">
+										<img src="./images/stavki.jpg" alt="NEWS">
+									</div>
+
+									<div class="news__info">
+										<div class="news__category-date">
+											<p class="news__date">17.11.2022</p>
+											<p class="news__category">Наука</p>
+										</div>
+
+										<p class="news__name">Lorem ipsum dolor sit.</p>
+
+										<p class="news__text clamp-4s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque voluptate, quis libero tempora dolorem ea culpa ipsam molestias, beatae excepturi aut, blanditiis itaque debitis sapiente ullam enim assumenda doloribus?</p>
+
+										<a href="#" class="news__more">Подробнее</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<aside class="news__filter">
+							<div class="news__filter-content">
+								<form action="" method="post" class="news__filter-form">
+									<input type="text" name="search-text" placeholder="Поиск...">
+									<button type="submit">
+										<i class="bx bx-search"></i>
+									</button>
+								</form>
+
+								<div class="news__filter-category">
+									<div class="news__filter-category-name">Категории</div>
+
+									<ul class="news__filter-category-list">
+										<li class="news__filter-category-item">Наука</li>
+										<li class="news__filter-category-item">Литература</li>
+										<li class="news__filter-category-item">Фентези</li>
+										<li class="news__filter-category-item">Бытовая</li>
+										<li class="news__filter-category-item">Космическая</li>
+									</ul>
+								</div>
+
+								<div class="news__filter-tags">
+									<div class="news__filter-tags-name">Теги</div>
+
+									<ul class="news__filter-tags-list">
+										<li class="news__filter-tags-item">Тег-1</li>
+										<li class="news__filter-tags-item">Тег-2</li>
+										<li class="news__filter-tags-item">Тег-3</li>
+										<li class="news__filter-tags-item">Тег-4</li>
+										<li class="news__filter-tags-item">Тег-5</li>
+									</ul>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</section>
 			</main>
 
 			<!-- * === Menu Button === -->
@@ -154,12 +289,12 @@
 			<!-- * === Change Theme === -->
 			<div class="theme-block">
 				<label for="theme-block__checkbox">
-					<img src="./images/Theme.png" alt="O">
+					<i class='bx bxs-moon'></i>
 				</label>
 				<input id="theme-block__checkbox" type="checkbox">
 			</div>
 		</div>
 
-		<script src="js/main.js"></script>   <!-- ~ Подключение скрипта инструментов -->
+		<script src="./js/main.js"></script>   <!-- ~ Подключение скрипта инструментов -->
 	</body>
 </html>

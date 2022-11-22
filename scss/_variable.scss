@@ -14,8 +14,13 @@
     --main-color-white: #ffffff;
     --main-color-black: #000000;
     --main-color-blue: #1565C0;
+    --main-color-link-blue: #0075fb;
+    --main-color-link-bg-blue: #93c4fb;
+    --main-color-blue-bg: #d6e5f5;
     --main-color-indigo: #283593;
     --main-color-red: #D84315;
+    --main-color-link-red: #f66a40;
+    --main-color-link-bg-red: #fab9a5;
     --main-color-gray-100: #EEEEEE;
     --main-color-gray-200: #BDBDBD;
     --main-color-gray-300: #9E9E9E;
@@ -31,33 +36,39 @@
 	--transition-3: .3s ease;
 	--transition-4: .6s ease;
 
-	--color-dark: rgb(32, 32, 32);
-	--background-block: 
+	--border-radius: 10px;
+	--box-shadow: 0 0 10px;
 }
 
 /* &===========================================================*/
 /* &=================== Change Theme ===============================*/
 [data-theme=dark]{
     --font-main-color: var(--main-color-white);
-    --font-secondary-color: var(--main-color-gray-200);
+    --font-secondary-color: var(--main-color-gray-300);
+    --font-link-color: var(--main-color-link-red);
 
 	--background-main-color: var(--main-color-gray-600);
 	--background-secondary-color: var(--main-color-gray-500);
 
-	--block-main-color: var(--main-color-gray-200);
+	--block-main-color: var(--main-color-gray-500);
+	--block-secondary-color: var(--main-color-gray-400);
+	--block-link-color: var(--main-color-link-bg-red);
 
 	--color-accent: var(--main-color-red);
 
-	--theme-rotate: 210deg;
+	--theme-rotate: 270deg;
 }
 [data-theme=light]{
     --font-main-color: var(--main-color-black);
-    --font-secondary-color: var(--main-color-gray-500);
+    --font-secondary-color: var(--main-color-gray-200);
+	--font-link-color: var(--main-color-link-blue);
 
-	--background-main-color: var(--main-color-gray-100);
-	--background-secondary-color: var(--main-color-gray-300);
+	--background-main-color: var(--main-color-blue-bg);
+	--background-secondary-color: var(--main-color-gray-100);
 
-	--block-main-color: var(--main-color-gray-200);
+	--block-main-color: var(--main-color-gray-100);
+	--block-secondary-color: var(--main-color-gray-200);
+	--block-link-color: var(--main-color-link-bg-blue);
 
 	--color-accent: var(--main-color-blue);
 
