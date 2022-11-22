@@ -16,6 +16,7 @@
     --main-color-blue: #1565C0;
     --main-color-indigo: #283593;
     --main-color-red: #D84315;
+    --main-color-blue-bg: #4d80bb;
     --main-color-gray-100: #EEEEEE;
     --main-color-gray-200: #BDBDBD;
     --main-color-gray-300: #9E9E9E;
@@ -40,11 +41,13 @@
 [data-theme=dark]{
     --font-main-color: var(--main-color-white);
     --font-secondary-color: var(--main-color-gray-200);
+    --font-link-color: var(--main-color-gray-200);
 
-	--background-main-color: var(--main-color-gray-600);
+	--background-main-color: var(--main-color-gray-500);
 	--background-secondary-color: var(--main-color-gray-500);
 
 	--block-main-color: var(--main-color-gray-200);
+	--block-secondary-color: var(--main-color-gray-200);
 
 	--color-accent: var(--main-color-red);
 
@@ -53,11 +56,13 @@
 [data-theme=light]{
     --font-main-color: var(--main-color-black);
     --font-secondary-color: var(--main-color-gray-500);
+	--font-link-color: var(--main-color-gray-200);
 
-	--background-main-color: var(--main-color-gray-100);
+	--background-main-color: var(--main-color-blue-bg);
 	--background-secondary-color: var(--main-color-gray-300);
 
 	--block-main-color: var(--main-color-gray-200);
+	--block-secondary-color: var(--main-color-gray-200);
 
 	--color-accent: var(--main-color-blue);
 
