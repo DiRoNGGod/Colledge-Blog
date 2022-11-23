@@ -1,0 +1,32 @@
+.footer {
+
+    border-top: 1px solid var(--color-accent);
+
+    &__content {
+        width: 100%;
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 700;
+
+        margin: 10px auto;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 20px;
+    }
+
+    &__tel {
+    }
+
+    &__email {
+    }
+
+    &__adress {
+
+    }
+}
