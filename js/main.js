@@ -19,13 +19,20 @@ try {
 const userProfileBtn = document.querySelector('.bxs-user');
 const userProfileList = document.querySelector('.header__user-list');
 
-try {
-    userProfileBtn.addEventListener('click', function (e) {
-        userProfileList.classList.toggle('_active');
-    })
-} catch (error) {
+document.addEventListener('click', function (e) {
+    if(!(e.target.closest('.header__user-list')) && !(e.target.closest('.bxs-user'))) {
+        userProfileList.classList.remove('_active');
+    }
     
-}
+    if(e.target.closest('.bxs-user')) {
+        userProfileList.classList.toggle('_active');
+    }
+})
+document.addEventListener('scroll', function() {
+    if(userProfileList.classList.contains('_active')) {
+        userProfileList.classList.remove('_active');
+    }
+})
 
 // & Скролл шапки
 
