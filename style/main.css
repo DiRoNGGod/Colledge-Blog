@@ -1225,7 +1225,7 @@ section {
 .form__button {
   padding: 10px;
   margin-bottom: 10px;
-  width: 60%;
+  min-width: 60%;
   background-color: var(--color-accent);
   align-self: center;
   border-radius: var(--border-radius);
