@@ -10,6 +10,9 @@ html, body {
 	width: 100%;
 	min-height: 100vh;
 
+	display: flex;
+	flex-direction: column;
+
 	overflow: hidden;
 }
 
@@ -23,6 +26,11 @@ html, body {
 
 main {
 	margin-top: var(--header-height);
+
+	flex: 1 1 auto;
+}
+.main__form {
+	margin-top: 0;
 }
 
 section {

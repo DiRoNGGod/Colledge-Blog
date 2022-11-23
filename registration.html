@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">  <!-- ~ Кодировка страницы -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <!-- ~ Адаптивность / Запрет масштабирования -->
+		<meta name="robots" content="none">  <!-- ~ Запрет индексации страницы -->
+
+		<link rel="icon" href="favicon.ico" type="image/x-icon">   <!-- ~ Подключение иконки вкладки -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<title>College Blog</title>   <!-- ~ Заголовок сайта -->
+
+		<!-- ~ Подлкючение шрифта -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">		
+		<!-- ~ Подлкючение шрифта -->
+
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">   <!-- ~ Иконочный шрифт -->
+
+		<link rel="stylesheet" href="style/main.css">   <!-- ~ Основные стили страницы -->
+	</head>
+
+	<body>
+		
+		<div class="wrapper">
+			
+			<main class="main main__form">
+				<div class="_container">
+
+					<div class="form__content">
+						<form action="" method="post" class="form">
+							<h3 class="form__title">Регистрация</h3>
+
+							<div class="form__item">
+								<i class='bx bx-user' ></i>
+								<input type="text" id="reg-name"  placeholder="Логин" tabindex="1">
+							</div>
+
+							<div class="form__item">
+								<i class='bx bx-envelope' ></i>
+								<input type="email" id="reg-email" placeholder="Почта" tabindex="2">
+							</div>
+
+							<div class="form__item">
+								<i class='bx bx-lock-alt' ></i>
+								<input type="password" id="reg-pass" placeholder="Пароль" tabindex="3">
+							</div>
+
+							<div class="form__item">
+								<i class='bx bx-lock-alt' ></i>
+								<input type="password" id="reg-pass-2" placeholder="Повторите пароль" tabindex="4">
+							</div>
+
+							<button class="form__button" type="submit">Зарегистрироаться</button>
+
+							<p class="form__text">
+								Уже есть аккаунт? <a href="./login.html" class="form__link">Авторизуйтесь!</a> <br>
+								Или <a href="./index.html" class="form__link">вернитесь на главную</a> страницу
+								
+							</p>
+						</form>
+					</div>
+
+				</div>
+			</main>
+
+			<!-- * === Change Theme === -->
+			<div class="theme-block">
+				<label for="theme-block__checkbox">
+					<i class='bx bxs-moon'></i>
+				</label>
+				<input id="theme-block__checkbox" type="checkbox">
+			</div>
+
+		</div>
+
+		<script src="./js/main.js"></script>   <!-- ~ Подключение скрипта инструментов -->
+	</body>
+</html>

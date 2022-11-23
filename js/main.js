@@ -5,19 +5,27 @@
 const menuBtn = document.querySelector(".menu-btn");
 const headerNav = document.querySelector(".header__nav");
 
-menuBtn.addEventListener('click', function(e) {
-    headerNav.classList.toggle('_active');
-    document.querySelector(".menu-btn__content").classList.toggle('_active');
-})
+try {
+    menuBtn.addEventListener('click', function(e) {
+        headerNav.classList.toggle('_active');
+        document.querySelector(".menu-btn__content").classList.toggle('_active');
+    })
+} catch (error) {
+    
+}
 
 // & Выплывающее меню пользователя
 
 const userProfileBtn = document.querySelector('.bxs-user');
 const userProfileList = document.querySelector('.header__user-list');
 
-userProfileBtn.addEventListener('click', function (e) {
-    userProfileList.classList.toggle('_active');
-})
+try {
+    userProfileBtn.addEventListener('click', function (e) {
+        userProfileList.classList.toggle('_active');
+    })
+} catch (error) {
+    
+}
 
 // & Скролл шапки
 

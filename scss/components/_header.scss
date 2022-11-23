@@ -219,16 +219,26 @@
 
     &__user {
         position: relative;
+
+        background-color: var(--block-main-color);
+        border-radius: var(--border-radius);
+
+        padding: 5px;
+
+        transition: var(--transition-3);
+
+        &:hover {
+            background-color: var(--color-accent);
+        }
     }
 
     &__user-list {
         position: absolute;
 
-        top: 40px;
+        top: 60px;
         right: -200%;
 
         border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
 
         background-color: var(--color-accent);
 
@@ -255,6 +265,8 @@
             padding: 3px;
 
             border-radius: var(--border-radius);
+
+            width: 100%;
         }
         & > a:hover {
             background-color: var(--font-link-color);

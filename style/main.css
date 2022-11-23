@@ -134,6 +134,8 @@ html, body {
 .wrapper {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -146,6 +148,11 @@ html, body {
 
 main {
   margin-top: var(--header-height);
+  flex: 1 1 auto;
+}
+
+.main__form {
+  margin-top: 0;
 }
 
 section {
@@ -273,13 +280,19 @@ section {
 
 .header__user {
   position: relative;
+  background-color: var(--block-main-color);
+  border-radius: var(--border-radius);
+  padding: 5px;
+  transition: var(--transition-3);
+}
+.header__user:hover {
+  background-color: var(--color-accent);
 }
 .header__user-list {
   position: absolute;
-  top: 40px;
+  top: 60px;
   right: -200%;
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
   background-color: var(--color-accent);
   opacity: 0;
   visibility: hidden;
@@ -297,6 +310,7 @@ section {
   transition: var(--transition-3);
   padding: 3px;
   border-radius: var(--border-radius);
+  width: 100%;
 }
 .header__user-item > a:hover {
   background-color: var(--font-link-color);
@@ -1149,6 +1163,7 @@ section {
 
 .footer {
   border-top: 1px solid var(--color-accent);
+  background-color: var(--background-secondary-color);
 }
 .footer__content {
   width: 100%;
@@ -1159,7 +1174,71 @@ section {
   margin: 10px auto;
 }
 .footer__row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template: 1fr/repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
   padding: 20px;
+}
+.form__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: var(--block-main-color);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  min-width: 30%;
+  margin: 0 auto;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.form__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.form__item {
+  position: relative;
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+.form__item input {
+  background-color: transparent;
+  border-bottom: 3px solid var(--font-main-color);
+  width: 100%;
+  padding-left: 35px;
+  font-size: inherit;
+  color: var(--font-main-color);
+}
+.form__item i {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  font-size: 26px;
+}
+.form__button {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 60%;
+  background-color: var(--color-accent);
+  align-self: center;
+  border-radius: var(--border-radius);
+  transition: var(--transition-3);
+}
+.form__button:hover {
+  transform: scale(1.1);
+}
+.form__text {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+}
+.form__link {
+  color: var(--font-link-color);
 }/*# sourceMappingURL=main.css.map */
