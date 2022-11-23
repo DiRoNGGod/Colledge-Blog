@@ -1,0 +1,201 @@
+// & =============== Шапка пользователя
+
+.head {
+    position: relative;
+
+    &__img-bg {
+        position: relative;
+
+        width: 100%;
+        padding-bottom: 50%;
+
+        border-radius: var(--border-radius);
+        overflow: hidden;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+
+    &__user-block {
+        padding: 25px;
+
+        box-shadow: var(--box-shadow);
+        border-radius: var(--border-radius);
+        background-color: var(--block-main-color);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 700px) {
+            position: absolute;
+            top: 45px;
+            left: 20px;
+
+            z-index: 5;
+        }
+    }
+
+    &__img-user {
+        position: relative;
+
+        width: 150px;
+        height: 150px;
+
+        border-radius: 50%;
+
+        overflow: hidden;
+        margin-bottom: 15px;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__user-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__user-name {
+        font-weight: 700;
+    }
+
+    &__user-email {
+        color: var(--font-secondary-color);
+    }
+}
+
+// & ==================== Запси пользователя
+
+.record {
+
+    &__button {
+        padding: 5px 10px;
+
+        border-radius: var(--border-radius);
+
+        background-color: var(--block-link-color);
+        color: var(--font-link-color);
+
+        margin-bottom: 30px;
+
+        transition: var(--transition-3);
+
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__grid {
+        
+        @media (min-width: 1000px) {
+            display: grid;
+            align-items: start;
+            grid-template: 1fr / 1fr 1fr;
+            gap: 20px;
+        }
+    }
+
+    &__user-row {
+        background-color: var(--block-main-color);
+
+        box-shadow: var(--box-shadow);
+        border-radius: calc(var(--border-radius) * 2);
+
+        padding: 20px;
+
+        margin-bottom: 20px;
+    }
+
+    &__user-title {
+        margin-bottom: 25px;
+
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__user-item {
+        display: flex;
+
+        background-color: var(--block-secondary-color);
+        border-radius: var(--border-radius);
+
+        padding: 10px;
+
+        margin-bottom: 15px;
+
+        cursor: pointer;
+    }
+
+    &__user-img {
+        position: relative;
+
+        width: 100%;
+
+        padding-bottom: 20%;
+
+        margin-right: 20px;
+
+        flex: 0 1 40%;
+
+        border-radius: var(--border-radius);
+        background-color: var(--block-main-color);
+
+        overflow: hidden;
+
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__user-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__user-details-title {
+        font-size: 24px;
+    }
+
+    &__user-details-text {
+        flex: 1 1 auto;
+    }
+
+    &__user-details-category {
+        color: var(--font-secondary-color);
+    }
+
+    &__user-favorite-row {
+    }
+}

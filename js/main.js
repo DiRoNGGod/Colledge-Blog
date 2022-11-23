@@ -10,6 +10,15 @@ menuBtn.addEventListener('click', function(e) {
     document.querySelector(".menu-btn__content").classList.toggle('_active');
 })
 
+// & Выплывающее меню пользователя
+
+const userProfileBtn = document.querySelector('.bxs-user');
+const userProfileList = document.querySelector('.header__user-list');
+
+userProfileBtn.addEventListener('click', function (e) {
+    userProfileList.classList.toggle('_active');
+})
+
 // & Скролл шапки
 
 window.addEventListener('scroll', function (e) {
