@@ -1,0 +1,82 @@
+.help {
+
+    &__accordeon {
+        border-radius: var(--border-radius);
+
+        box-shadow: var(--box-shadow);
+
+        overflow: hidden;
+
+
+        &-content {
+            & > *:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__accordeon-name {
+        background-color: var(--block-secondary-color);
+
+        padding: 10px 5px;
+
+        font-size: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__accordeon-btn {
+        padding: 10px;
+
+        border-radius: var(--border-radius);
+
+        background-color: var(--background-secondary-color);
+
+        cursor: pointer;
+
+        transition: var(--transition-3);
+
+        &:hover {
+            background-color: var(--color-accent);
+        }
+
+        &._active {
+            transform: rotateX(180deg);
+        }
+    }
+
+    &__accordeon-answer {
+        background-color: var(--block-main-color);
+
+        color: var(--font-secondary-color);
+
+        overflow-y: scroll;
+
+        height: 0;
+
+        transition: var(--transition-3);
+
+        &._active {
+            height: 100px;
+        }
+
+        &::-webkit-scrollbar {   /* ^ Ширина скролбара*/
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track {   /* ^ Цвет полосы скролбара*/
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {   /* ^ Ползунок скролбара*/
+            background: var(--block-secondary-color);
+        
+            border-radius: 3px
+        }
+    }
+
+    &__accordeon-answer-text {
+        padding: 20px;
+        
+    }
+}

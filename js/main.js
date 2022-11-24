@@ -108,3 +108,23 @@ listButton.forEach(el => {
         el.parentElement.nextElementSibling.classList.toggle('_active');
     })
 });
+
+const listHelpButton = document.querySelectorAll('.help__accordeon-btn');
+
+listHelpButton.forEach(el => {
+    el.addEventListener('click', function (e) {
+
+        let heightHelpList = el.parentElement.nextElementSibling.offsetHeight;
+
+        listHelpButton.forEach(el => {
+            if (!(e.target.closest('.help__accordeon-btn').classList.contains('_active'))) {
+                el.classList.remove('_active');
+                el.parentElement.nextElementSibling.classList.remove('_active');
+                el.parentElement.style.marginBottom = 0;
+            }
+        });
+        
+        el.classList.toggle('_active');
+        el.parentElement.nextElementSibling.classList.toggle('_active');
+    })
+});
