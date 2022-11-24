@@ -52,31 +52,34 @@
 
         color: var(--font-secondary-color);
 
-        overflow-y: scroll;
+        // overflow: auto;
 
-        height: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        max-height: 0;
 
         transition: var(--transition-3);
 
         &._active {
-            height: 100px;
+            opacity: 1;
+            visibility: visible;
         }
 
-        &::-webkit-scrollbar {   /* ^ Ширина скролбара*/
-            width: 4px;
-        }
-        &::-webkit-scrollbar-track {   /* ^ Цвет полосы скролбара*/
-            background: transparent;
-        }
-        &::-webkit-scrollbar-thumb {   /* ^ Ползунок скролбара*/
-            background: var(--block-secondary-color);
+        // &::-webkit-scrollbar {   /* ^ Ширина скролбара*/
+        //     width: 4px;
+        // }
+        // &::-webkit-scrollbar-track {   /* ^ Цвет полосы скролбара*/
+        //     background: transparent;
+        // }
+        // &::-webkit-scrollbar-thumb {   /* ^ Ползунок скролбара*/
+        //     background: var(--block-secondary-color);
         
-            border-radius: 3px
-        }
+        //     border-radius: 3px
+        // }
     }
 
     &__accordeon-answer-text {
         padding: 20px;
-        
     }
 }

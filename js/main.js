@@ -100,31 +100,60 @@ try {
 // & Раскрытие аккордеона
 
 const listButton = document.querySelectorAll('.news__filter-accordion');
+const listContent = document.querySelectorAll('.news__filter-category-list');
 
 listButton.forEach(el => {
     el.addEventListener('click', function (e) {
-        el.classList.toggle('_active');
+        let listContentElement = el.parentElement.nextElementSibling;
 
-        el.parentElement.nextElementSibling.classList.toggle('_active');
+        if (!(e.target.closest('.news__filter-accordion').classList.contains('_active'))) {
+            listButton.forEach(el => {
+                el.classList.remove('_active');
+                listContentElement.classList.remove('_active');
+            });
+
+            listContent.forEach(el => {
+                el.style.maxHeight = null;
+            });
+        }
+        
+        el.classList.toggle('_active');
+        listContentElement.classList.toggle('_active');
+
+        if(listContentElement.classList.contains('_active')) {
+            listContentElement.style.maxHeight = listContentElement.scrollHeight + "px";
+        } else {
+            listContentElement.style.maxHeight = null;
+        }
     })
 });
 
 const listHelpButton = document.querySelectorAll('.help__accordeon-btn');
+const helpContent = document.querySelectorAll('.help__accordeon-answer');
 
 listHelpButton.forEach(el => {
     el.addEventListener('click', function (e) {
 
-        let heightHelpList = el.parentElement.nextElementSibling.offsetHeight;
+        let helpContentElement = el.parentElement.nextElementSibling;
 
-        listHelpButton.forEach(el => {
-            if (!(e.target.closest('.help__accordeon-btn').classList.contains('_active'))) {
+        if (!(e.target.closest('.help__accordeon-btn').classList.contains('_active'))) {
+            listHelpButton.forEach(el => {
                 el.classList.remove('_active');
-                el.parentElement.nextElementSibling.classList.remove('_active');
-                el.parentElement.style.marginBottom = 0;
-            }
-        });
+                helpContentElement.classList.remove('_active');
+            });
+
+            helpContent.forEach(el => {
+                el.style.maxHeight = null;
+            });
+        }
         
         el.classList.toggle('_active');
-        el.parentElement.nextElementSibling.classList.toggle('_active');
+        helpContentElement.classList.toggle('_active');
+
+        if(helpContentElement.classList.contains('_active')) {
+            helpContentElement.style.maxHeight = helpContentElement.scrollHeight + "px";
+        } else {
+            helpContentElement.style.maxHeight = null;
+        }
     })
 });
