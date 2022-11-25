@@ -76,7 +76,7 @@
 
 
 
-    &__row.list-news {
+    &__row.list-news {   // * Отображение новостей в виде списка
 
         & > *:not(:last-child) {
             margin-bottom: 35px;
@@ -89,11 +89,27 @@
         grid-template-columns: repeat( auto-fill, 48%);
         gap: 25px;
 
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
             display: block;
 
             & > *:not(:last-child) {
                 margin-bottom: 35px;
+            }
+        }
+
+        &.news-page {   // * Стили отдельной страницы с новостями
+            grid-template-columns: repeat( auto-fill, 30%);
+
+            & .news__img {
+                height: 150px;
+            }
+        }
+
+        &.article-page {   // * Стили отдельной страницы со статьями
+            grid-template-columns: repeat( auto-fill, 48%);
+
+            & .news__img {
+                height: 150px;
             }
         }
     }
@@ -106,6 +122,8 @@
         padding: 25px 20px;
 
         box-shadow: var(--box-shadow);
+
+        overflow: hidden;
     }
 
     &__item.list-box {
@@ -123,7 +141,6 @@
         width: 100%;
 
         margin-right: 20px;
-        padding-bottom: 30%;
 
         flex: 0 0 40%;
 

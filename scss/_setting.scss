@@ -45,6 +45,14 @@ section {
 	overflow: hidden;
 	white-space: nowrap;
 }
+.clamp-1-news-page {
+	text-overflow: ellipsis;
+	
+	overflow: hidden;
+	white-space: nowrap;
+
+	max-width: 200px !important;
+}
 .clamp-2 {
 	display: -webkit-box;
 	-webkit-line-clamp: 4;
